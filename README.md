@@ -22,6 +22,8 @@ Thus far this has not been able to be implimented,
 Struggles:
     were that we were trying to use the Gargoyle flashlight thing as a proximity color element but I realized late that how the Gargoyle is colored, my method only replaced the stone material layer and made the whole thing blue, and never changed the color of the light.
 
+    Looking closer we need to access and change the emission color of the material not the render color.
+
 Currently I am trying to see if I can have the directional light change color based on anything, with mixed success. 
 
 Particle effect: 
