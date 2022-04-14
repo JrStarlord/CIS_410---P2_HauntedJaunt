@@ -3,7 +3,8 @@ using System;
 using System.Collections;
 
 
-public class colorSwap: MonoBehaviour
+public class colorSwap
+  : MonoBehaviour
 {
     public Color StartColor;
     public Color EndColor;
@@ -23,10 +24,14 @@ public class colorSwap: MonoBehaviour
     {
         if (!isCycling)
         {
-            if (goingForward)
-                StartCoroutine(CycleMaterial(StartColor, EndColor, time, myMaterial));
+            if (goingForward) 
+            {
+                myMaterial.SetColor("_EmissionColor", StartColor);
+            }
             else
-                StartCoroutine(CycleMaterial(EndColor, StartColor, time, myMaterial));
+            {
+                myMaterial.SetColor("_EmissionColor", EndColor);
+            }        
         }
     }
 
